@@ -1,0 +1,9 @@
+<h1 class="mat-h1">Country Detail</h1>
+<app-country-info [country]="country"></app-country-info>
+<div *ngIf="weather">
+  <h1 class="mat-h1">Daily weather</h1>
+  <app-weather-card 
+    *ngFor="let a of weather.daily.data let i = index" 
+    [weather]="a"
+    [days]="i"></app-weather-card>
+</div>
